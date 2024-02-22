@@ -1,36 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import Header from "./Header"
 function App() {
-  const [count, setCount] = useState(0)
+  const hello = true;
+  const llamas = true;
+  const llamaFacts = [
+    "llamas can live for 20 years", "llamas are very social", 
+    "llamas can grow to 6 feet tall", "llamas can hum", 
+    "llamas can spit up to 10 feet", "llamas are used as therapy animals"
+    ];
+  
 
   return (
-    <>
-      <div>
-        <h1>Jake's App</h1>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <Header></Header>
+      <h1>Llama Facts</h1>
+
+      {llamaFacts.map((item) => {
+        return (<div>{item}</div>)
+      })}
+
+      <h2>
+        {hello && (<div>Llamas are amazing animals!</div>)}
+        {llamas ? (<div>Everyone should own a llama.</div>) : 
+        (<div>My wife says no!</div>)}
+      </h2>
+    </div>
   )
 }
-
 export default App
