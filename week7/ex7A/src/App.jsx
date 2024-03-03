@@ -58,7 +58,7 @@ function App() {
             <th>Image</th>
             <th>Deck Name</th>
             <th>Manufacturer</th>
-            <th>Release Year</th>
+            <th>Released</th>
             <th>Description</th>
           </tr>
         </thead>

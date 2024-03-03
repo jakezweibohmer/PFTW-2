@@ -13,7 +13,7 @@ export function CardsRow({
       <td>
         <img src={image} alt={name} />
       </td>
-      <td style={{ fontWeight: 900, color: "red" }}>{name}</td>
+      <td style={{ fontWeight: 900, color: "#f3d645" }}>{name}</td>
       <td>{manufacturer}</td>
       <td>{released}</td>
       <td>{description}</td>
