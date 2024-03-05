@@ -1,34 +1,31 @@
 import "./App.css";
 import { useState } from "react";
+import { camelidPics } from "./camelids";
 
 function App() {
-  const [scoreObj, setScoreObj] = useState({ left: 0, right: 0 });
-  function incrementRightScore() {
-    const newScore = {
-      left: scoreObj.left,
-      right: scoreObj.right + 1,
-    };
-    setScoreObj(newScore);
-  }
+  const [index, setIndex] = useState(0);
+
+  const handleAlpacaClick = () => {
+    setIndex(0);
+  };
+
+  const handleLlamaClick = () => {
+    setIndex(1);
+  };
+
+  const camelids = camelidPics[index];
 
   return (
     <>
-      <h1>Solitare Clicky Game</h1>
+      <h1>Favorite Camelid</h1>
       <div>
-        <button
-          onClick={() => {
-            setScoreObj({ ...scoreObj, left: scoreObj.left + 1 });
-          }}
-        >
-          Alpaca
-        </button>
+        <img src={camelids.image} alt={camelids.alt} />
       </div>
+      <p>Click the button to view your favorite Camelid!</p>
+
       <div>
-        <button onClick={incrementRightScore}>Llama</button>
-      </div>
-      <div>
-        <h2>Scores</h2>
-        Left Score {scoreObj.left} | Right Score {scoreObj.right}
+        <button onClick={handleAlpacaClick}>Alpaca</button>
+        <button onClick={handleLlamaClick}>Llama</button>
       </div>
     </>
   );
