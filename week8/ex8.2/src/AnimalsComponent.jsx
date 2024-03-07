@@ -10,7 +10,7 @@ export default function AnimalsComponent({ animalName, deleteFn, focusFn }) {
         >
           Focus
         </button>
-        |
+
         <button
           onClick={() => {
             deleteFn(animalName);

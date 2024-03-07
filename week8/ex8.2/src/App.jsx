@@ -5,7 +5,7 @@ import "./App.css";
 import AnimalsComponent from "./AnimalsComponent";
 
 function App() {
-  const [headline, setHeadline] = useState("List of Animals");
+  const [headline, setHeadline] = useState("Jake's Pet Farm");
   const [animals, setAnimals] = useState([
     "Dog",
     "Cat",
@@ -29,12 +29,13 @@ function App() {
 
   return (
     <>
-      <h1>{`${headline} is the focus`}</h1>
-      {animals.map((loopState) => {
+      <h1>{`${headline}`}</h1>
+      <h2>Focus on the ones you love. Delete the ones you despise!</h2>
+      {animals.map((myAnimal) => {
         return (
           <AnimalsComponent
-            key={animals}
-            animalName={loopState}
+            key={myAnimal}
+            animalName={myAnimal}
             deleteFn={deleteAnimal}
             focusFn={focusAnimal}
           />
