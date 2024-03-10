@@ -6,7 +6,6 @@ import copy from "../assets/copy_icon.svg";
 export default function ItemCard({
   name,
   manufacturer,
-  released,
   description,
   image,
   ownIt,
@@ -53,7 +52,6 @@ export default function ItemCard({
 ItemCard.PropTypes = {
   name: PropTypes.string,
   manufacturer: PropTypes.string,
-  released: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
   ownIt: PropTypes.bool,

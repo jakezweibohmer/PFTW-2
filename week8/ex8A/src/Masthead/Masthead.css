@@ -1,6 +1,15 @@
 .masthead {
-    max-width:  728px;
     width: 100%;
+    max-width: 850px;
     text-align: center;
-    margin: 50px auto 20px;
+    margin: 0 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: rgb(233, 212, 143);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 5em;
+    margin-bottom: 0;
 }
