@@ -25,6 +25,7 @@ export default function ItemCard({
         <img src={image} alt={name} />
       </div>
       <div className="cardTitle">{name}</div>
+      <div className="cardManufacturer">{manufacturer}</div>
       <div className="actions">
         <a
           href="#"
@@ -45,8 +46,6 @@ export default function ItemCard({
           <img src={copy} />
         </a>
       </div>
-      <div className="cardManufacturer">{manufacturer}</div>
-      <div className="cardReleased">{released}</div>
       <div className="cardDescription">{description}</div>
     </div>
   );
