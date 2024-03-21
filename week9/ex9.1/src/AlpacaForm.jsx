@@ -68,8 +68,52 @@ export function AlpacaForm() {
     "West Virginia",
     "Wyoming",
   ];
-
   const [formObject, setFormObject] = useState(initialFormData);
+  const [errorObject, setErrorObject] = useState({
+    firstName: "",
+    lastName: "",
+  });
+  function validateAll() {
+    validateFirstName();
+    validateLastName();
+  }
+  function validateFirstName() {
+    if (!formObject.firstName) {
+      setErrorObject((prevErrorObject) => {
+        return {
+          ...prevErrorObject,
+          firstName: "This field is required",
+        };
+      });
+    } else {
+      setErrorObject((prevErrorObject) => {
+        return {
+          ...prevErrorObject,
+          firstName: "",
+        };
+      });
+    }
+  }
+  function validateLastName() {
+    if (!formObject.lastName) {
+      // set error object
+      setErrorObject((prevErrorObject) => {
+        return {
+          ...prevErrorObject,
+          lastName: "This field cannot be empty",
+        };
+      });
+    } else {
+      //clear error object
+      setErrorObject((prevErrorObject) => {
+        return {
+          ...prevErrorObject,
+          lastName: "",
+        };
+      });
+    }
+  }
+
   function changeHandler(event) {
     console.log(event.target.value);
     if (event.target.name === "colors") {
@@ -98,6 +142,10 @@ export function AlpacaForm() {
   }
   function handleSubmit(event) {
     console.log("submit triggered");
+    validateAll();
+    if (!errorObject.firstName && !errorObject.lastName) {
+      // submit form
+    }
     event.preventDefault();
     console.log("the whole form object", formObject);
   }
@@ -107,24 +155,44 @@ export function AlpacaForm() {
         <fieldset>
           <legend>Personal Information</legend>
           <div className="formgroup">
-            <label htmlFor="firstname">First Name </label>
+            <label className="required" htmlFor="firstname">
+              First Name{" "}
+            </label>
             <input
               type="text"
               name="firstName"
               id="firstName"
               value={formObject.firstName}
               onChange={changeHandler}
+              onBlur={() => {
+                validateFirstName();
+              }}
             />
+            {errorObject.firstName && (
+              <>
+                <br />
+                <span className="error">{errorObject.firstName}</span>
+              </>
+            )}
           </div>
           <div className="formgroup">
-            <label htmlFor="lastName">Last Name </label>
+            <label className="required" htmlFor="lastName">
+              Last Name{" "}
+            </label>
             <input
               type="text"
               name="lastName"
               id="lastName"
               value={formObject.lastName}
               onChange={changeHandler}
+              onBlur={validateLastName}
             />
+            {errorObject.lastName && (
+              <>
+                <br />
+                <span className="error">{errorObject.lastName}</span>
+              </>
+            )}
           </div>
           <div className="formgroup">
             <label htmlFor="street">Street Address </label>
@@ -219,7 +287,12 @@ export function AlpacaForm() {
             </label>
           </div>
         </fieldset>
-        <button type="submit">Sign me up</button>
+        <button
+          type="submit"
+          disabled={errorObject.firstName || errorObject.passwrd}
+        >
+          Sign me up
+        </button>
       </form>
     </>
   );
