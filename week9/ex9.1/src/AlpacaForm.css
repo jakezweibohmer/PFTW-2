@@ -1,0 +1,22 @@
+/* form related */
+fieldset {
+  border-radius: 10px;
+  border-color: rgb(32, 203, 218);
+  margin-bottom: 1em;
+  padding: 30px;
+}
+
+legend {
+  color: goldenrod;
+  font-size: 2em;
+  padding: 0 20px;
+}
+
+input {
+  border-radius: 7px;
+}
+
+input[type=checkbox] {
+  margin-right: 5px;
+  margin-left: 20px;
+}
