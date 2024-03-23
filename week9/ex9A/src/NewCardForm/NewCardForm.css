@@ -1,0 +1,50 @@
+legend {
+    color: white;
+}
+
+fieldset {
+    color: white;
+}
+
+.new-card-form-wrapper {
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: row;
+    margin: 10px;
+    width: 90%;
+    padding: 5px;
+}
+
+.form-group.error {
+    border: 1px solid red;
+}
+
+.errorFeedback {
+    margin-top: -5px;
+    color: red;
+    text-align: center;
+    font-weight: 900;
+}
+
+label {
+    margin-right: 5px;
+}
+
+input {
+    margin-left: 5px;
+    flex-grow: 1;
+}
+
+button {
+    margin: 20px;
+}
+
+label.required::before {
+    content: "* ";
+    color: red;
+}
