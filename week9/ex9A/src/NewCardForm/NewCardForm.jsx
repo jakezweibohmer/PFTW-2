@@ -16,8 +16,10 @@ export function NewCardForm({ addDeckFn }) {
   const [newDeck, setNewDeck] = useState(initialDeckSetting);
   const [errorObj, setErrorObj] = useState({
     name: "",
+    released: "",
     image: "",
     manufacturer: "",
+    description: "",
   });
   function validateForm(newDeck) {
     console.log("triggering validation");
@@ -58,6 +60,16 @@ export function NewCardForm({ addDeckFn }) {
         return {
           ...prevErrorObj,
           image: "The image field is required",
+        };
+      });
+      valid = false;
+    }
+    if (!newDeck.description) {
+      //set description prop to error message
+      setErrorObj((prevErrorObj) => {
+        return {
+          ...prevErrorObj,
+          description: "The description field is required",
         };
       });
       valid = false;
@@ -210,8 +222,10 @@ export function NewCardForm({ addDeckFn }) {
             </>
           )}
         </div>
-        <div className="formgroup">
-          <label htmlFor="description">Description </label>
+        <div className={{ "form-group": true, error: errorObj.description }}>
+          <label className="required" htmlFor="description">
+            Description{" "}
+          </label>
           <input
             type="text"
             name="description"
@@ -232,15 +246,19 @@ export function NewCardForm({ addDeckFn }) {
           {errorObj.description && (
             <>
               <br />
-              <small>{errorObj.description}</small>
+              <small className="errorFeedback">{errorObj.description}</small>
             </>
           )}
+          <p className="tip">
+            <b>TIP:</b>{" "}
+            <i>Select and copy the text from the deck you want to duplicate.</i>
+          </p>
         </div>
       </fieldset>
       <fieldset>
-        <legend>Collection Details</legend>
+        <legend>Do you "have it", or do you "need it"?</legend>
         <div className="form-group">
-          <label htmlFor="ownIt">I own this one </label>
+          <label htmlFor="ownIt">I own this one! </label>
           <input
             type="checkbox"
             name="ownIt"
@@ -250,7 +268,7 @@ export function NewCardForm({ addDeckFn }) {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="dontHave">I need this one </label>
+          <label htmlFor="dontHave">I need this one! </label>
           <input
             type="checkbox"
             name="dontHave"
@@ -267,7 +285,8 @@ export function NewCardForm({ addDeckFn }) {
           errorObj.name ||
           errorObj.manufacturer ||
           errorObj.released ||
-          errorObj.image
+          errorObj.image ||
+          errorObj.description
         }
       >
         Add Deck
@@ -275,7 +294,7 @@ export function NewCardForm({ addDeckFn }) {
     </form>
   );
 }
-
+// links back to App.jsx file
 NewCardForm.PropTypes = {
   addDeckFn: PropTypes.func.isRequired,
 };
