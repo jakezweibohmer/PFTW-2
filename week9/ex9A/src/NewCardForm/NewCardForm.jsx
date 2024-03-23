@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 export function NewCardForm({ addDeckFn }) {
   const initialDeckSetting = {
-    deck: "",
+    name: "",
     manufacturer: "",
     released: "",
     description: "",
@@ -15,19 +15,19 @@ export function NewCardForm({ addDeckFn }) {
   };
   const [newDeck, setNewDeck] = useState(initialDeckSetting);
   const [errorObj, setErrorObj] = useState({
-    deck: "",
+    name: "",
     image: "",
     manufacturer: "",
   });
   function validateForm(newDeck) {
     console.log("triggering validation");
     let valid = true;
-    if (!newDeck.deck) {
+    if (!newDeck.name) {
       //set error obj deck prop to error message
       setErrorObj((prevErrorObj) => {
         return {
           ...prevErrorObj,
-          deck: "The deck name is required",
+          name: "The deck name is required",
         };
       });
       valid = false;
@@ -96,31 +96,33 @@ export function NewCardForm({ addDeckFn }) {
     <form className="new-card-form-wrapper" onSubmit={submitHandler}>
       <fieldset>
         <legend>Card Details</legend>
-        <div className={{ "form-group": true, error: errorObj.deck }}>
-          <label className="required" htmlFor="deck">
+        <div className={{ "form-group": true, error: errorObj.name }}>
+          <label className="required" htmlFor="name">
             Deck Name{" "}
           </label>
           <input
             type="text"
-            name="deck"
-            id="deck"
-            value={newDeck.deck}
+            name="name"
+            id="name"
+            value={newDeck.name}
             onChange={changeHandler}
+            // onBlur sets error message - see button at bottom
             onBlur={() => {
-              if (newDeck.deck) {
+              if (newDeck.name) {
                 setErrorObj((prevErrorObj) => {
                   return {
                     ...prevErrorObj,
-                    deck: "",
+                    name: "",
                   };
                 });
               }
             }}
           />
-          {errorObj.deck && (
+          {errorObj.name && (
             <>
               <br />
-              <small className="errorFeedback">{errorObj.deck}</small>
+              {/* links to CSS for error message */}
+              <small className="errorFeedback">{errorObj.name}</small>
             </>
           )}
         </div>
@@ -260,8 +262,9 @@ export function NewCardForm({ addDeckFn }) {
       </fieldset>
       <button
         type="submit"
+        // Prevents submit if fields are left empty
         disabled={
-          errorObj.deck ||
+          errorObj.name ||
           errorObj.manufacturer ||
           errorObj.released ||
           errorObj.image
