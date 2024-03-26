@@ -3,7 +3,8 @@ import musicData from "../assets/music-list.json";
 export function Home() {
   return (
     <>
-      <h1>Music List</h1>
+      <h1>Top 50 Songs</h1>
+      <h3>All the fan favorites</h3>
       {musicData.map((song) => {
         return (
           <div key={song.slug}>

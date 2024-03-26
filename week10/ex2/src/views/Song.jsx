@@ -9,7 +9,10 @@ export function Song({ data }) {
   return (
     <>
       <nav>
-        <Link to="/">Go back to Home</Link>
+        <Link to="/">
+          Back to <br />
+          Top 50 List
+        </Link>
       </nav>
       <h1>{selectedSong.title}</h1>
       <img src={selectedSong.cover} alt={selectedSong.title} />
