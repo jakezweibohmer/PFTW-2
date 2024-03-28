@@ -1,0 +1,14 @@
+html {
+    background-color: rgb(36, 36, 36);
+}
+
+.collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+}

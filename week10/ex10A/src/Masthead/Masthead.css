@@ -1,0 +1,21 @@
+.masthead {
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+    margin: 0 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.masthead img {
+    border: 3px solid rgb(87, 87, 87);
+    border-radius: 12px;
+}
+
+h1 {
+    color: rgb(233, 212, 143);
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 5em;
+    font-weight: 900;
+    margin-bottom: 0;
+}
