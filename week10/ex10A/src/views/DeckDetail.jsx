@@ -8,7 +8,6 @@ export function DeckDetail({ data }) {
   console.log("deck", selectedDeck);
   return (
     <div className="detailsPage">
-      <Link to="../">Return to Deck List</Link>
       <h1>{selectedDeck.name}</h1>
       <p className="detailsText">{selectedDeck.manufacturer}</p>
       <img
@@ -17,7 +16,9 @@ export function DeckDetail({ data }) {
         alt={selectedDeck.name}
       />
       <p className="detailsText">{selectedDeck.description}</p>
-      {selectedDeck.ownIt && <p className="detailsText">I own this one!</p>}
+      <Link className="returnLink" to="../">
+        Return to Deck List
+      </Link>
     </div>
   );
 }
