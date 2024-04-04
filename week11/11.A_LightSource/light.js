@@ -4,13 +4,14 @@ function setup() {
   // The direction of the light is controlled with the mouse position."
 }
 function draw() {
-  background(0);
   //move your mouse to change light direction
-  let dirX = (mouseX / width - 0.5) * 1;
-  let dirY = (mouseY / height - 0.5) * 1;
-  directionalLight(7, 247, 239, -dirX, -dirY, -0.1);
+  let dirX = (mouseX / width - 0.5) * 2;
+  let dirY = (mouseY / height - 0.5) * 2;
+  directionalLight(0, 255, 251, -dirX, -dirY, -0.25);
+  fill(255);
   noStroke();
   sphere(200);
+  box(100);
 }
 
 function windowResized() {
