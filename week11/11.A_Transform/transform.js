@@ -8,14 +8,6 @@ function setup() {
 function draw() {
   background(0);
   rotateY(90 / 4);
-  // The three stationary blue boxes
-  stroke(0, 246, 255);
-  box(80);
-  stroke(0, 246, 255);
-  box(300);
-  stroke(0, 246, 255);
-  box(800);
-  strokeWeight(2);
 
   // Speed of rotation
   let rad = millis() / 2000;
@@ -29,7 +21,7 @@ function draw() {
     ct,
     0.0,
     st,
-    0.0,
+    1.0,
     0.5,
     1.0,
     0.0,
@@ -48,6 +40,34 @@ function draw() {
   box(200);
   stroke(255, 0, 187);
   box(500);
+  strokeWeight(1);
+
+  // Matrix for rotation around the Y axis - blue boxes
+  applyMatrix(
+    ct,
+    0.0,
+    st,
+    0.0,
+    1.0,
+    1.0,
+    2.0,
+    0.0,
+    -st,
+    0.0,
+    ct,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  );
+  // The three stationary magenta boxes
+  stroke(0, 246, 255);
+  box(80);
+  stroke(0, 246, 255);
+  box(300);
+  stroke(0, 246, 255);
+  box(800);
   strokeWeight(3);
 }
 
