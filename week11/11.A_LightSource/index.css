@@ -5,7 +5,7 @@
   
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    background-color: #000000;
   
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -14,7 +14,7 @@
   }
   
   body {
-    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(255, 0, 17), rgb(6, 199, 189), rgb(0, 0, 0));
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(66, 3, 3), rgb(255, 0, 17), rgb(6, 199, 189), rgb(0, 0, 0));
     text-align: center;
     padding-top: 6em;
     place-items: center;
@@ -23,7 +23,7 @@
   }
   
   h1 {
-    color: rgb(245, 240, 0);
+    color: rgb(255, 255, 255);
     font-size: 2em;
     line-height: 1.1;
     margin-bottom: 0;
