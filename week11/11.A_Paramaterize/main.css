@@ -1,0 +1,24 @@
+:root {
+    --green: #54b4a5;
+    --font-sans-serif: "Poppins", sans-serif;
+    --font-serif: "DM Serif Display", serif;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+    background-color: var(--green);
+  }
+  
+ h1 {
+    font-family: var(--font-serif);
+    font-size: 3em;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+    color: white;
+  }
