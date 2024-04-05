@@ -26,3 +26,8 @@ function mouseDragged() {
   noStroke();
   ellipse(mouseX, mouseY, circleSize, circleSize);
 }
+
+function windowResized() {
+  // Resize canvas when window size changes
+  resizeCanvas(windowWidth, windowHeight);
+}
