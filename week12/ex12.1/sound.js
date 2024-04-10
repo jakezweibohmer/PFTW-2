@@ -1,9 +1,9 @@
-var song;
-var button;
-var amp;
+let song;
+let button;
+let amp;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(700, 400);
   // Corrosion of Conformity's "The Door"
   song = loadSound("TheDoor.mp3", loaded);
   amp = new p5.Amplitude();
@@ -16,12 +16,14 @@ function loaded() {
 }
 
 function draw() {
-  background(255);
+  background(0);
 
-  var vol = amp.getLevel();
-  var diam = map(vol, 0, 0.3, 30, 1200);
-  noStroke();
-  fill(255, 0, 255);
+  let vol = amp.getLevel();
+  let diam = map(vol, 0, 0.3, 30, 1500);
+  // red circle
+  stroke(245, 107, 109);
+  strokeWeight(20);
+  fill(255, 0, 0);
   ellipse(width / 2, height / 2, diam, diam);
 }
 
@@ -34,9 +36,4 @@ function togglePlaying() {
     song.stop();
     button.html("play");
   }
-}
-
-function windowResized() {
-  // Resize canvas when window size changes
-  resizeCanvas(windowWidth, windowHeight);
 }
