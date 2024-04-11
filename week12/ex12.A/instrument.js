@@ -1,4 +1,5 @@
 // sound variables
+// sounds downloaded from: https://mixkit.co/free-sound-effects/
 let sound1,
   sound2,
   sound3,
