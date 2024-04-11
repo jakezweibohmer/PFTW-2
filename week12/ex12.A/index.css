@@ -1,0 +1,86 @@
+* {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #242424;
+
+  }
+  
+  body {
+    text-align: center;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    color: rgb(0, 235, 252);
+    font-size: 3em;
+    line-height: 1.1;
+    margin-top: 2em;
+    margin-bottom: .25em;
+
+  }
+
+  h2 {
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    line-height: 1;
+    margin-bottom: 2em;
+
+  }
+
+  .sounds {
+  }
+
+ button {
+  color: rgb(255, 252, 252);
+  font-weight: 900;
+  margin-bottom: 3px;
+    width: 10em;
+    height: 10em;
+    padding: 40px;
+    outline: none;
+    border: 0;
+    background: aqua;
+    border-radius: 10px;
+  }
+
+  button:hover {
+    opacity: .4;
+  }
+
+  .one {
+    background-color: rgb(55, 255, 0);
+  }
+  .two {
+    background-color: rgb(63, 230, 17);
+  }
+  .three {
+    background-color: rgb(66, 210, 26);
+  }
+  .four {
+    background-color: rgb(66, 184, 33);
+  }
+  .five {
+    background-color: rgb(63, 153, 38);
+  }
+  .six {
+    background-color: rgb(58, 126, 40);
+  }
+  .seven {
+    background-color: rgb(66, 184, 33);
+  }
+  .eight {
+    background-color: rgb(66, 210, 26);
+  }
+  .nine {
+    background-color: rgb(63, 230, 17);
+  }
+  .ten {
+    background-color: rgb(55, 255, 0);
+  }
+  
+  
