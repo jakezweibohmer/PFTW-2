@@ -36,7 +36,7 @@
   }
 
  button {
-  color: rgb(255, 252, 252);
+  color: rgb(0, 0, 0);
   font-weight: 900;
   margin-bottom: 3px;
     width: 10em;
@@ -53,34 +53,34 @@
   }
 
   .one {
-    background-color: rgb(55, 255, 0);
+    background-color: rgb(0, 235, 252);
   }
   .two {
-    background-color: rgb(63, 230, 17);
+    background-color: rgb(0, 235, 252);
   }
   .three {
-    background-color: rgb(66, 210, 26);
+    background-color: rgb(0, 235, 252);
   }
   .four {
-    background-color: rgb(66, 184, 33);
+    background-color: rgb(0, 235, 252);
   }
   .five {
-    background-color: rgb(63, 153, 38);
+    background-color: rgb(0, 235, 252);
   }
   .six {
-    background-color: rgb(58, 126, 40);
+    background-color: rgb(0, 235, 252);
   }
   .seven {
-    background-color: rgb(66, 184, 33);
+    background-color: rgb(0, 235, 252);
   }
   .eight {
-    background-color: rgb(66, 210, 26);
+    background-color: rgb(0, 235, 252);
   }
   .nine {
-    background-color: rgb(63, 230, 17);
+    background-color: rgb(0, 235, 252);
   }
   .ten {
-    background-color: rgb(55, 255, 0);
+    background-color: rgb(0, 235, 252);
   }
   
   
