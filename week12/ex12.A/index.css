@@ -45,42 +45,47 @@
     outline: none;
     border: 0;
     background: aqua;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   button:hover {
     opacity: .4;
+    transform: scale(1.2, 1.2);
+
+  }
+
+  button:not(:hover) {
   }
 
   .one {
-    background-color: rgb(0, 235, 252);
+    background-color: #E211F1;
   }
   .two {
-    background-color: rgb(0, 235, 252);
+    background-color: #C30FCF;
   }
   .three {
-    background-color: rgb(0, 235, 252);
+    background-color: #EA11FA;
   }
   .four {
-    background-color: rgb(0, 235, 252);
+    background-color: #A30CAD;
   }
   .five {
-    background-color: rgb(0, 235, 252);
+    background-color: #830A8B;
   }
   .six {
-    background-color: rgb(0, 235, 252);
+    background-color: #830A8B;
   }
   .seven {
-    background-color: rgb(0, 235, 252);
+    background-color: #EA11FA;
   }
   .eight {
-    background-color: rgb(0, 235, 252);
+    background-color: #A30CAD;
   }
   .nine {
-    background-color: rgb(0, 235, 252);
+    background-color: #C30FCF;
   }
   .ten {
-    background-color: rgb(0, 235, 252);
+    background-color: #E211F1;
   }
   
   
