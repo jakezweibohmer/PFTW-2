@@ -1,10 +1,10 @@
 * {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
+    color: white;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #242424;
 
   }
   
@@ -13,32 +13,44 @@
     place-items: center;
     justify-content: center;
     align-items: center;
+    background-image: url("concertbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+        background-color: rgb(47, 32, 4);
+
+  }
+
+  p {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 2em;
   }
   
   h1 {
     color: rgb(0, 235, 252);
-    font-size: 3em;
-    line-height: 1.1;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 4em;
+    line-height: 0.9;
     margin-top: 2em;
     margin-bottom: .25em;
-
   }
 
   h2 {
     color: rgb(255, 255, 255);
-    font-size: 1em;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 100;
+    font-size: 1.25em;
     line-height: 1;
-    margin-bottom: 2em;
 
-  }
-
-  .sounds {
   }
 
  button {
-  color: rgb(0, 0, 0);
-  font-weight: 900;
-  margin-bottom: 3px;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    margin-bottom: 3px;
     width: 10em;
     height: 10em;
     padding: 40px;
@@ -49,43 +61,43 @@
   }
 
   button:hover {
-    opacity: .4;
-    transform: scale(1.2, 1.2);
-
+    transition: 0.4s ease-in-out;
+    border-radius: 50%;
+    opacity: .9;
   }
 
   button:not(:hover) {
   }
 
   .one {
-    background-color: #E211F1;
+    background-color: #00343A;
   }
   .two {
-    background-color: #C30FCF;
+    background-color: #065867;
   }
   .three {
-    background-color: #EA11FA;
+    background-color: #078E92;
   }
   .four {
-    background-color: #A30CAD;
+    background-color: #F03866;
   }
   .five {
-    background-color: #830A8B;
+    background-color: #F06484;
   }
   .six {
-    background-color: #830A8B;
+    background-color: #f51d53;
   }
   .seven {
-    background-color: #EA11FA;
+    background-color: #F06484;
   }
   .eight {
-    background-color: #A30CAD;
+    background-color: #F09300;
   }
   .nine {
-    background-color: #C30FCF;
+    background-color: #065867;
   }
   .ten {
-    background-color: #E211F1;
+    background-color: #078E92;
   }
   
   
