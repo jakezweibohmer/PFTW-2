@@ -1,39 +1,40 @@
-let song;
-let button;
-let amp;
+var slider;
+var slider2;
+var pos;
 
 function setup() {
-  createCanvas(700, 400);
-  // Corrosion of Conformity's "The Door"
-  song = loadSound("TheDoor.mp3", loaded);
-  amp = new p5.Amplitude();
-  background(51);
-}
+  createCanvas(500, 500);
+  angleMode(DEGREES);
 
-function loaded() {
-  button = createButton("play");
-  button.mousePressed(togglePlaying);
+  slider = createSlider(0, 15, 0);
+  slider2 = createSlider(0, 15, 0);
+
+  pos = 0.0;
+  // increment in degrees
+  inc = 3.0;
+
+  pos2 = 0.0;
+  inc2 = 7.0;
 }
 
 function draw() {
-  background(0);
+  clear();
 
-  let vol = amp.getLevel();
-  let diam = map(vol, 0, 0.3, 30, 1500);
-  // red circle
-  stroke(245, 107, 109);
-  strokeWeight(20);
-  fill(255, 0, 0);
-  ellipse(width / 2, height / 2, diam, diam);
-}
+  translate(width / 2, height / 2);
 
-function togglePlaying() {
-  if (!song.isPlaying()) {
-    song.play();
-    song.setVolume(0.3);
-    button.html("pause");
-  } else {
-    song.stop();
-    button.html("play");
+  var mySinVal = sin(pos);
+  var mySinVal2 = sin(pos2);
+
+  amplified = mySinVal * 50;
+  amplified2 = mySinVal2 * 50;
+
+  // ellipse(amplified + 100, height / 2, 100, 100);
+
+  for (x = 0; x <= 360; x = x + 5) {
+    curve(0, 10, 50, amplified2, amplified, 10, amplified, 10);
+    rotate(x);
   }
+
+  pos = pos + slider.value();
+  pos2 = pos2 + slider2.value();
 }
