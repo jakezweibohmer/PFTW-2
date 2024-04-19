@@ -43,15 +43,15 @@ function draw() {
     var g = map(points[i].y, 0, height, g1, g2);
     var b = map(points[i].x, 0, width, b1, b2);
     // alpha determines the edge opacity
-    var alpha = map(
-      dist(width / 2, height / 2, points[i].x, points[i].y),
-      0,
-      350,
-      400,
-      0
-    );
+    // var alpha = map(
+    //   dist(width / 2, height / 2, points[i].x, points[i].y),
+    //   0,
+    //   350,
+    //   400,
+    //   0
+    // );
 
-    fill(r, g, b, alpha);
+    fill(r, g, b);
 
     var angle = map(
       noise(points[i].x * mult, points[i].y * mult),
@@ -63,9 +63,9 @@ function draw() {
 
     points[i].add(createVector(cos(angle), sin(angle)));
 
-    if (dist(width / 2, height / 2, points[i].x, points[i].y) < 350) {
-      ellipse(points[i].x, points[i].y, 1);
-    }
+    // if (dist(width / 2, height / 2, points[i].x, points[i].y) < 350) {
+    ellipse(points[i].x, points[i].y, 1);
+    // }
   }
 }
 
