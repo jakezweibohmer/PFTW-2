@@ -25,8 +25,8 @@ window.addEventListener("load", function () {
       this.angle = 0;
       this.distance = 0;
       // how particles interact with mouse movements
-      this.friction = Math.random() * 0.6 + 0.15;
-      this.ease = Math.random() * 0.1 + 0.005;
+      this.friction = Math.random() * 1 + 0.15;
+      this.ease = Math.random() * 0.2 + 0.003;
     }
 
     draw() {
@@ -61,7 +61,7 @@ window.addEventListener("load", function () {
       this.textX = this.canvasWidth / 2;
       this.textY = this.canvasHeight / 2;
       this.fontSize = 150;
-      this.lineHeight = this.fontSize * 0.8;
+      this.lineHeight = this.fontSize * 1;
       this.maxTextWidth = this.canvasWidth * 0.8;
       this.textInput = document.getElementById("textInput");
       this.textInput.addEventListener("keyup", (e) => {
