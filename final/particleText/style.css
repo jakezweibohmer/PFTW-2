@@ -1,24 +1,27 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kavoon", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
-    overflow: hidden;
-    background: rgb(0, 0, 0);
+  overflow: hidden;
+  background: rgb(0, 0, 0);
 }
-
+  
 canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 input {
-    position: absolute;
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin: 10px;
-    z-index: 100;
+  position: absolute;
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px;
+  z-index: 100;
 }
