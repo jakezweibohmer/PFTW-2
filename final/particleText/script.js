@@ -1,5 +1,21 @@
 // tutorial from: https://www.youtube.com/watch?v=2F2t1RJoGt8
 
+let sound1;
+
+// Preload sounds
+window.addEventListener("load", function () {
+  sound1 = new Audio("biodynamic.mp3");
+});
+
+document.addEventListener("mousedown", function () {
+  // Stop the sound if it's playing
+  sound1.pause();
+  sound1.currentTime = 0; // Reset the sound to the beginning
+
+  // Play the sound again
+  sound1.play();
+});
+
 window.addEventListener("load", function () {
   const canvas = document.getElementById("canvas1");
   const ctx = canvas.getContext("2d", {
@@ -70,6 +86,7 @@ window.addEventListener("load", function () {
           this.wrapText(e.target.value);
         }
       });
+
       // particle text
       this.particles = [];
       this.gap = 3;
