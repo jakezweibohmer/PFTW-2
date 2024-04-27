@@ -76,7 +76,8 @@ window.addEventListener("load", function () {
       this.canvasHeight = canvasHeight;
       this.textX = this.canvasWidth / 2;
       this.textY = this.canvasHeight / 2;
-      this.fontSize = 150;
+      // change font size and leading here
+      this.fontSize = 200;
       this.lineHeight = this.fontSize * 1;
       this.maxTextWidth = this.canvasWidth * 0.8;
       this.textInput = document.getElementById("textInput");
@@ -86,7 +87,6 @@ window.addEventListener("load", function () {
           this.wrapText(e.target.value);
         }
       });
-
       // particle text
       this.particles = [];
       this.gap = 3;
@@ -108,16 +108,17 @@ window.addEventListener("load", function () {
         canvas.width,
         canvas.height
       );
-      gradient.addColorStop(0.3, "red");
-      gradient.addColorStop(0.5, "orange");
-      gradient.addColorStop(0.7, "#00d8ff");
+      // typopgraphy settings
+      gradient.addColorStop(0.3, "#07fe9e");
+      gradient.addColorStop(0.7, "#ff00ba");
+      gradient.addColorStop(0.9, "#00d8ff");
       this.context.fillStyle = gradient;
       this.context.textAlign = "center";
       this.context.textBaseline = "middle";
       this.context.lineWidth = 3;
       this.context.strokeStyle = "white";
       // change font to what you linked to Google fonts on index.html
-      this.context.font = this.fontSize + "px Kavoon";
+      this.context.font = this.fontSize + "px Pirata One";
 
       // break multiline text
       let linesArray = [];
