@@ -42,7 +42,7 @@ window.addEventListener("load", function () {
       this.distance = 0;
       // how particles interact with mouse movements
       this.friction = Math.random() * 1 + 0.15;
-      this.ease = Math.random() * 0.2 + 0.003;
+      this.ease = Math.random() * 0.2 + 0.001;
     }
 
     draw() {
@@ -78,7 +78,7 @@ window.addEventListener("load", function () {
       this.textY = this.canvasHeight / 2;
       // change font size and leading here
       this.fontSize = 200;
-      this.lineHeight = this.fontSize * 1;
+      this.lineHeight = this.fontSize * 0.85;
       this.maxTextWidth = this.canvasWidth * 0.8;
       this.textInput = document.getElementById("textInput");
       this.textInput.addEventListener("keyup", (e) => {
@@ -91,7 +91,7 @@ window.addEventListener("load", function () {
       this.particles = [];
       this.gap = 3;
       this.mouse = {
-        radius: 20000,
+        radius: 30000,
         x: 0,
         y: 0,
       };
@@ -110,8 +110,8 @@ window.addEventListener("load", function () {
       );
       // typopgraphy settings
       gradient.addColorStop(0.3, "#07fe9e");
-      gradient.addColorStop(0.7, "#ff00ba");
-      gradient.addColorStop(0.9, "#00d8ff");
+      gradient.addColorStop(0.5, "#ff00ba");
+      gradient.addColorStop(0.7, "#00d8ff");
       this.context.fillStyle = gradient;
       this.context.textAlign = "center";
       this.context.textBaseline = "middle";
@@ -190,7 +190,7 @@ window.addEventListener("load", function () {
     }
   }
   const effect = new Effect(ctx, canvas.width, canvas.height);
-  effect.wrapText(effect.textInput.placeholder);
+  effect.wrapText(effect.textInput.name);
   effect.render();
 
   function animate() {
